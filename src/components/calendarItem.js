@@ -22,6 +22,12 @@ export default class CalendarItem extends PureComponent {
                   style={calItemStyle}
                   className="profile-box"
                 >
+                  {/* <div className="profile-details" style={{backgroundColor: details.color}}>
+                    <div className="profile-content">
+                      <div className="profile-name">{details.name}</div>
+                      <div className="profile-bday">{details.birthday}</div>
+                    </div>
+                  </div> */}
                   <span className="profile-txt" title={details.birthday}>{details.label}</span>
                 </span>
               );

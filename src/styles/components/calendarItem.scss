@@ -1,29 +1,37 @@
 @import "base";
 @import "prefixer";
 .calendar-item {
-    display: inline-block;
-    margin: 10px 0 0 10px;
-    flex-grow: 1;
-    width: calc(100% * (1/4) - 10px - 1px);
-    border-radius: 4px;
-    overflow: hidden;
-    border: 1px solid $border-color;
-    background: $white;
-  .ci-heading-wrap{
-      background-color: $secondary;
-      color: $white;
-      height: 36px;
-      line-height: 36px;
-      padding: 0 12px;
+  display: inline-block;
+  margin: 10px 0 0 10px;
+  flex-grow: 1;
+  width: calc(100% * (1/4) - 10px - 1px);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid $border-color;
+  background: $white;
+  box-shadow: 2px 2px 2px $border-color;
+  transition: transform 0.2s ease-out;
+  //   &:hover {
+  //     transform: scale(1.02)
+  //   }
+  .ci-heading-wrap {
+    background-color: $secondary;
+    color: $white;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 12px;
   }
-  .ci-heading{
-      text-align: right;
+  .ci-heading {
+    text-align: right;
+    font-weight: 700;
+    text-shadow: 0px 0px 1px #3c3c3c;
   }
-  .ci-content-wrap{
-      height: 156px;
-      display: grid;
-      grid-template-columns: repeat(6, 30px);
-      grid-auto-flow: row;
+  .ci-content-wrap {
+    height: 156px;
+    display: grid;
+    grid-template-columns: repeat(6, 30px);
+    grid-auto-flow: row;
+    position: relative;
   }
   .profile-box {
     color: $white;
@@ -32,10 +40,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-shadow: 0px 0px 1px #3c3c3c;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    position: relative;
+    // &:hover {
+    //   position: static;
+    //   .profile-txt {
+    //     opacity: 0;
+    //   }
+    //   .profile-details {
+    //     opacity: 1;
+    //   }
+    // }
   }
-//   .profile-txt{
-//       position: absolute;
-
+  .profile-txt {
+    transition: opacity 0.3s ease-out;
+    opacity: 1;
+  }
+//   .profile-details {
+//     transition: opacity 0.3s ease-out;
+//     opacity: 0;
+//     display: flex;
+//     color: $white;
+//     text-align: center;
+//     position: absolute;
+//     left: 0;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
 //   }
 }
-

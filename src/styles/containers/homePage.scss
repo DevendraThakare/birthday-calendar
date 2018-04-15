@@ -28,6 +28,9 @@
     }
     .year-dropdown{
         margin-bottom: 40px;
+        .dropdown-header{
+            box-shadow: 2px 2px 2px $border-color;
+        }
         ul{
             padding: 0;
             margin: 0;

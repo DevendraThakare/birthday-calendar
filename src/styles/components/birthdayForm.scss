@@ -25,6 +25,7 @@
     box-sizing: border-box;
     height: 300px;
     font-size: 16px;
+    box-shadow: 2px 2px 2px $border-color;
   }
   .json-input {
     .generate-json-lnk {
@@ -55,6 +56,7 @@
   .year-field {
     width: 200px;
     font-size: 16px;
+    box-shadow: 2px 2px 2px $border-color;
   }
   .bf-submit {
     width: 120px;
