@@ -1,0 +1,37 @@
+const weekDays = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
+const colorCodes = [
+  "#ff084a",
+  "#c0c5ff",
+  "#aa102f",
+  "#e679e3",
+  "#ee5a7e",
+  "#beee53",
+  "#ce9fe8",
+  "#f6360b",
+  "#2525ec",
+  "#df0664",
+  "#f53cfd",
+  "#0099cc",
+  "#fef65b",
+  "#ccff00",
+  "#a0db8e",
+  "#cc0000",
+  "#66cccc",
+  "#3399ff",
+  "#81d8d0",
+  "#b4eeb4",
+  "#ff7f50",
+  "#ffdab9",
+  "#c39797",
+  "#ff00ff",
+  "#00ced1",
+  "#66cdaa",
+  "#f6546a",
+  "#ff6666",
+  "#f08080",
+  "#fa8072",
+  "#800080",
+  "#ffb6c1"
+];
+
+export default { weekDays, colorCodes };

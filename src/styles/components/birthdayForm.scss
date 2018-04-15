@@ -1,0 +1,64 @@
+@import "base";
+@import "prefixer";
+.birthday-form {
+  .json-input-field,
+  .year-field {
+    border: 1px solid $border-color;
+    outline: none;
+    border-radius: 4px;
+    padding: 15px;
+  }
+  .json-input-wrap {
+    width: 60%;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  .year-field-btn-wrap {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 40px;
+    box-sizing: border-box;
+  }
+  .json-input-field {
+    width: 100%;
+    box-sizing: border-box;
+    height: 300px;
+    font-size: 16px;
+  }
+  .json-input {
+    .generate-json-lnk {
+      cursor: pointer;
+      color: $primary;
+      &:hover {
+        color: darken( $primary, 10%)
+      }
+    }
+    .form-err {
+        float: right;
+    }
+  }
+  .form-err {
+    color: $error;
+    height: 16px;
+    display: inline-block;
+  }
+  .year-field-wrap{
+      margin-bottom: 30px;
+  }
+  .year-field-label {
+    display: block;
+    color: $font-color;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  .year-field {
+    width: 200px;
+    font-size: 16px;
+  }
+  .bf-submit {
+    width: 120px;
+    line-height: 40px;
+    font-weight: 500;
+  }
+}

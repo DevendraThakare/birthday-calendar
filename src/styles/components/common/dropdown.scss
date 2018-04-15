@@ -1,0 +1,50 @@
+@import "base";
+@import "prefixer";
+
+
+.dropdown-component {
+  position: relative;
+  background-color: $white;
+  display: inline-block;
+  @include user-select(none);
+  .dropdown-container {
+    position: absolute;
+    z-index: 10;
+    background-color: $white;
+    border: 1px solid $border-color;
+    border-top: 0;
+    border-radius: 0 0 2px 2px;
+    box-sizing: border-box;
+    li{
+      cursor: pointer;
+      padding: 10px 10px;
+			min-width: 140px;
+      font-size: 13px;
+      color: $font-color;
+      &:hover{
+        background-color: $primary;
+        color: $white;
+      }
+    }
+  }
+  .dropdown-header{
+    padding: 0 15px;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+    line-height: 40px;
+    color: $font-color;
+    min-width: 130px;
+    cursor: pointer;
+    .icon-arrow-down{
+      margin-left: 8px;
+      line-height: inherit;
+      display: inline-block;
+      float: right;
+    }
+  }
+  &.is-open{
+    .dropdown-header {
+      border-radius: 2px 2px 0 0;
+    }
+  }
+}

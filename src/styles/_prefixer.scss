@@ -1,0 +1,128 @@
+// Settings go here
+@mixin box-sizing($value) {
+  box-sizing: $value;
+}
+
+@mixin box-shadow($value) {
+  box-shadow: $value;
+}
+
+@mixin border-radius($value) {
+  border-radius: $value;
+}
+
+@mixin background-size($value) {
+  background-size: $value;
+}
+
+@mixin transition($value) {
+  transition: $value;
+}
+
+@mixin transition-transform($transition) {
+  transition: transform $transition;
+}
+
+@mixin transition-delay($transition-delay) {
+  transition-delay: $transition-delay;
+}
+
+@mixin transform($value) {
+  transform: $value;
+}
+
+@mixin transform-origin($args) {
+  transform-origin: $args;
+}
+
+@mixin scale($ratio) {
+  transform: scale($ratio);
+}
+
+@mixin user-select($select) {
+  user-select: $select;
+}
+
+@mixin down-arrow($width: 9px, $frontcolor: #fff, $backcolor: #d6d6d6) {
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    border: solid transparent;
+    position: absolute;
+    top: -2*$width + 2px;
+    left: -$width + 1px;
+  }
+  &:before {
+    border-width: $width;
+    border-bottom-color: $backcolor;
+    margin: -2px 0 0 -1px;
+  }
+  &:after {
+    border-bottom-color: $frontcolor;
+  }
+}
+
+@mixin text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin btn($color: #e6e6e6, $height: auto, $font: 14px, $width: auto, $background: #fff) {
+  display: inline-block;
+  height: $height;
+  width: $width;
+  line-height: $height;
+  outline: 0;
+  padding: 0 15px;
+  text-align: center;
+  font-size: $font;
+  border-radius: 2px;
+  border: 1px solid $color;
+  background: $color;
+  color: #fff;
+  @include transition(.2s);
+  @include box-sizing(border-box);
+  @include text-overflow();
+  &.bordered {
+    color: $color;
+    background: $background;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    background-color: $white80;
+    border: 1px solid $white60;
+  }
+}
+
+@mixin btnNew($color: #fff, $height: auto, $font: 14px, $width: auto, $background: #e6e6e6) {
+  height: $height;
+  width: $width;
+  line-height: $height;
+  font-size: $font;
+  border: 1px solid $background;
+  background: $background;
+  color: $color;
+  &.bordered {
+    color: $color;
+    background: $background;
+  }
+
+  &.disabled {
+    pointer-events: none;
+    background-color: $white80;
+    border: 1px solid $white60;
+  }
+}
+
+@mixin background-image-ret($normal, $hdr) {
+  background-image: url($normal);
+  @media (min-device-pixel-ratio: 1.5),
+    (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx) {
+    background-image: url($hdr);
+  }
+}

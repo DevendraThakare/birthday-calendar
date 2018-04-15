@@ -1,0 +1,41 @@
+@import "base";
+@import "prefixer";
+.calendar-item {
+    display: inline-block;
+    margin: 10px 0 0 10px;
+    flex-grow: 1;
+    width: calc(100% * (1/4) - 10px - 1px);
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid $border-color;
+    background: $white;
+  .ci-heading-wrap{
+      background-color: $secondary;
+      color: $white;
+      height: 36px;
+      line-height: 36px;
+      padding: 0 12px;
+  }
+  .ci-heading{
+      text-align: right;
+  }
+  .ci-content-wrap{
+      height: 156px;
+      display: grid;
+      grid-template-columns: repeat(6, 30px);
+      grid-auto-flow: row;
+  }
+  .profile-box {
+    color: $white;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+//   .profile-txt{
+//       position: absolute;
+
+//   }
+}
+
