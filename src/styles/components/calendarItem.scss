@@ -6,14 +6,10 @@
   flex-grow: 1;
   width: calc(100% * (1/4) - 10px - 1px);
   border-radius: 4px;
-  overflow: hidden;
   border: 1px solid $border-color;
   background: $white;
   box-shadow: 2px 2px 2px $border-color;
   transition: transform 0.2s ease-out;
-  //   &:hover {
-  //     transform: scale(1.02)
-  //   }
   .ci-heading-wrap {
     background-color: $secondary;
     color: $white;
@@ -44,30 +40,35 @@
     cursor: pointer;
     transition: all 0.3s ease-out;
     position: relative;
-    // &:hover {
-    //   position: static;
-    //   .profile-txt {
-    //     opacity: 0;
-    //   }
-    //   .profile-details {
-    //     opacity: 1;
-    //   }
-    // }
+    &:hover {
+      .profile-details {
+        opacity: 1;
+         z-index: 1;
+      }
+    }
   }
   .profile-txt {
     transition: opacity 0.3s ease-out;
     opacity: 1;
   }
-//   .profile-details {
-//     transition: opacity 0.3s ease-out;
-//     opacity: 0;
-//     display: flex;
-//     color: $white;
-//     text-align: center;
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     top: 0;
-//     bottom: 0;
-//   }
+  .profile-details {
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+    display: flex;
+    color: $white;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: -120px;
+    width: 120px;
+    background-color: rgba(0,0,0,0.7);
+    .profile-content{
+      font-size: 12px;
+      font-weight: normal;
+      padding: 10px;
+    }
+    .profile-name{
+      font-weight: bold;
+    }
+  }
 }
